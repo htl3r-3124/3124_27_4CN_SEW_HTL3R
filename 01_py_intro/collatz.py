@@ -6,8 +6,8 @@ Beispiel:
 """
 
 __author__ = "Nico Kliche"
-__example__ = "SEW4/01/Palindrom"
-__date__ = "24.09.2026"
+__example__ = "SEW4/01/2"
+__date__ = "25.09.2026"
 __version__ = "1.2.0"
 __license__ = "GNU GPLv3"
 __status__ = "Released"
