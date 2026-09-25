@@ -15,8 +15,8 @@ __status__ = "Released"
 
 def is_palindrom(s: str) -> bool:
     """
-    :param s: Input string
-    :return: Boolean, returns True if string is palindrome
+    :param s: Mögliches Palindrom
+    :return: True oder False je nachdem ob der String ein Palindrom ist oder nicht
 
     >>> is_palindrom("Palindrome")
     False
@@ -28,8 +28,8 @@ def is_palindrom(s: str) -> bool:
 
 def is_palindrom_sentence(s: str) -> bool:
     """
-    :param s: Input string
-    :return: Boolean, returns True if sentence is palindrome
+    :param s: Möglicher Palindrom-Satz
+    :return: True oder False je nachdem ob der Satz ein Palindrom ist oder nicht
 
     >>> is_palindrom_sentence("This sentence is not a palindrome")
     False
@@ -41,8 +41,8 @@ def is_palindrom_sentence(s: str) -> bool:
 
 def palindrom_product(x) -> int:
     """
-    :param x: Input Integer, highest allowed product
-    :return: Integer, highest allowed palindrome product
+    :param x: Maximum
+    :return: Größtes erlaubtes Produkt aus zwei 3-Stelligen Zahlen die ein Palindrom ergeben
 
     >>> palindrom_product(1000000)
     906609
@@ -61,8 +61,8 @@ def palindrom_product(x) -> int:
 
 def get_dec_hex_palindrom(x) -> int:
     """
-    :param x: Input Integer, highest allowed number
-    :return: Integer, highest dec and hex palindrome
+    :param x: Maximum
+    :return: Größte Zahl die als Dec und Hex ein Palindrom sind
 
     >>> get_dec_hex_palindrom(99999)
     98689

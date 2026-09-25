@@ -1,7 +1,8 @@
 """
 Dieses Modul beinhaltet eine Funktion zur McCarthy-91-Funktion
 Beispiel:
-
+>>> M(91)
+91
 """
 
 __author__ = "Nico Kliche"
@@ -18,7 +19,7 @@ from time import time
 def M(n: int) -> int:
     """
     :param n: Startzahl
-    :return: Zahl > 100
+    :return: Erste Zahl über 100 subtrahiert mit 10
 
     >>> M(91)
     91
