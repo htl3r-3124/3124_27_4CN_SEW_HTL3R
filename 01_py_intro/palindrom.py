@@ -87,20 +87,12 @@ def to_base(number: int, base: int) -> str:
     >>> to_base(1234,16)
     '4D2'
     """
-    s: str = "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"[:base]
+    s: str = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"[:base]
     result: str = ""
-    counter: int = 0
-    while base ** counter < number:
-        counter += 1
-    counter -= 1
-    while counter >= 0:
-        for i in range(base)[::-1]:
-            if i * base ** counter < number:
-                result += s[i]
-                counter -= 1
-                number -= i * base ** counter
-                continue
-    return result
+    while number > 0:
+        result += s[number % base]
+        number = number // base
+    return result[::-1]
 
 
 def main() -> None:
