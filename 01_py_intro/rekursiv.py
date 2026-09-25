@@ -43,10 +43,10 @@ def main() -> None:
         for i in range(200):
             m_list.append(M(i))
             m_dict[i] = M(i)
-    except:
+    except ValueError:
         pass
     t1 = time()
-    print(t1 - t0)
+    print(f"Dauer: {t1 - t0}")
 
 
 if __name__ == "__main__":
