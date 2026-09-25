@@ -79,7 +79,7 @@ def get_dec_hex_palindrom(x) -> int:
     return max(result)
 
 
-def to_base(number:int, base:int)->str:
+def to_base(number: int, base: int) -> str:
     """
     :param number: Zahl im 10er-System
     :param base: Zielsystem (maximal 36)
@@ -87,7 +87,20 @@ def to_base(number:int, base:int)->str:
     >>> to_base(1234,16)
     '4D2'
     """
-
+    s: str = "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"[:base]
+    result: str = ""
+    counter: int = 0
+    while base ** counter < number:
+        counter += 1
+    counter -= 1
+    while counter >= 0:
+        for i in range(base)[::-1]:
+            if i * base ** counter < number:
+                result += s[i]
+                counter -= 1
+                number -= i * base ** counter
+                continue
+    return result
 
 
 def main() -> None:
