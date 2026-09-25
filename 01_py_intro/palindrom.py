@@ -12,8 +12,6 @@ __version__ = "1.2.0"
 __license__ = "GNU GPLv3"
 __status__ = "Released"
 
-import doctest
-
 
 def is_palindrom(s: str) -> bool:
     """
@@ -51,7 +49,6 @@ def palindrom_product(x) -> int:
     >>> palindrom_product(555555)
     554455
     """
-
     palindromes: list[int] = []
     for i in range(100, 1000):
         for j in range(100, 1000):
@@ -72,7 +69,6 @@ def get_dec_hex_palindrom(x) -> int:
     >>> get_dec_hex_palindrom(5000)
     3003
     """
-
     result: list[int] = []
     for i in range(x):
         if is_palindrom(str(i)) and is_palindrom(str(hex(i))[2:]): result.append(i)
@@ -93,15 +89,3 @@ def to_base(number: int, base: int) -> str:
         result += s[number % base]
         number = number // base
     return result[::-1]
-
-
-def main() -> None:
-    doctest.testmod()
-    try:
-        pass
-    except ValueError:
-        pass
-
-
-if __name__ == "__main__":
-    main()
